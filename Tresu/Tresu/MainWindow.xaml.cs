@@ -29,7 +29,8 @@ namespace Tresu
       
         private void Forgot_Password(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("fefef");
+            ForgotPassWindow window = new ForgotPassWindow();
+            window.Show();
         }
     }
 }
