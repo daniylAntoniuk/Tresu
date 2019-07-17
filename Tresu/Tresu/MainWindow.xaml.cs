@@ -24,5 +24,12 @@ namespace Tresu
         {
             InitializeComponent();
         }
+
+      
+      
+        private void Forgot_Password(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("fefef");
+        }
     }
 }
