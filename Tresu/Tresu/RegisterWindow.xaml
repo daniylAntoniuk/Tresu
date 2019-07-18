@@ -4,9 +4,36 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tresu"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="RegisterWindow" Height="450" Width="800">
+        Title="Register" 
+        Background="White" ResizeMode="NoResize" Height="441.604" Width="350">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="296*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="50,0,0,0">
+            <Image Source="tresu_logo.png"/>
+            <Label Content="Tresu"  FontSize="24" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Label Content="Email :" FontSize="20"/>
+            <TextBox Width="200" x:Name="EmailBox" HorizontalAlignment="Left"/>
+            <Label Content="Login :" FontSize="20"/>
+            <TextBox Width="200" x:Name="LoginBox" HorizontalAlignment="Left"/>
+            <Label Content="Password :" FontSize="20"/>
+            <PasswordBox Width="200" x:Name="PasswordBox" HorizontalAlignment="Left"/>
+            <Label Content="Repeat Password :" FontSize="20"/>
+            <PasswordBox Width="200" x:Name="RepeatPasswordBox" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" >
+            <Button Content="Register" Height="Auto" Width="108" HorizontalAlignment="Right" Margin="0,0,0,24"/>
+        </StackPanel>
     </Grid>
 </Window>
