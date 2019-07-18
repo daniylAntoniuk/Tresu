@@ -46,7 +46,7 @@ namespace Tresu
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("tresu.suport@gmail.com", "Tresu8834");
                 SmtpServer.EnableSsl = true;
-
+                //Tresu8834s&
                 SmtpServer.Send(mail);
                 MessageBox.Show("Mail Sent");
                 this.Close();

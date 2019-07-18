@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.28917.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tresu", "Tresu\Tresu.csproj", "{A6190C92-CA8A-4F01-80B9-965925599C68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{B9E4CEF8-3F4E-453F-ABC0-ABFBCAC08ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{BBD8E95A-452A-4DAD-B5DA-2ADE659701A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A6190C92-CA8A-4F01-80B9-965925599C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6190C92-CA8A-4F01-80B9-965925599C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6190C92-CA8A-4F01-80B9-965925599C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E4CEF8-3F4E-453F-ABC0-ABFBCAC08ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E4CEF8-3F4E-453F-ABC0-ABFBCAC08ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E4CEF8-3F4E-453F-ABC0-ABFBCAC08ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E4CEF8-3F4E-453F-ABC0-ABFBCAC08ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD8E95A-452A-4DAD-B5DA-2ADE659701A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD8E95A-452A-4DAD-B5DA-2ADE659701A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD8E95A-452A-4DAD-B5DA-2ADE659701A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD8E95A-452A-4DAD-B5DA-2ADE659701A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
