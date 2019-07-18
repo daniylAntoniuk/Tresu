@@ -32,5 +32,11 @@ namespace Tresu
             ForgotPassWindow window = new ForgotPassWindow();
             window.Show();
         }
+
+        private void ButtonReg_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow window = new RegisterWindow();
+            window.Show();
+        }
     }
 }

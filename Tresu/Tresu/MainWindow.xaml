@@ -34,7 +34,7 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" >
 
-            <Button Content="Register"  Height="Auto" Width="120" HorizontalAlignment="Right"/>
+            <Button Content="Register" Click="ButtonReg_Click"  Height="Auto" Width="120" HorizontalAlignment="Right"/>
             <Button Content="Login"  Height="Auto" Width="120" HorizontalAlignment="Left" Margin="40,0,0,0"/>
 
         </StackPanel>
