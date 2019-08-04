@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    [Table("tblUsers")]
+    [Table("tblUser")]
     class Users
     {
         [Key]
@@ -23,7 +23,7 @@ namespace DAL.Entities
         [Required]
         public string Password { get; set; }
 
-        public virtual ICollection<UserFriends> UserFriends { get; set; }
+        //public virtual ICollection<UserFriends> UserFriends { get; set; }
 
         public virtual ICollection<UserGames> UserGames { get; set; }
     }

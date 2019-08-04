@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    [Table ("tblGames")]
+    [Table ("tblGame")]
     class Games
     {
         [Key]
@@ -26,5 +26,7 @@ namespace DAL.Entities
         public string Photo { get; set; }
 
         public virtual ICollection<Skins> Skins { get; set; }
+
+        public virtual ICollection<UserGames> UserGames { get; set; }
     }
 }

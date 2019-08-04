@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    [Table("tblUserFriends")]
+    [Table("tblUserFriend")]
     class UserFriends
     {
         [Key]

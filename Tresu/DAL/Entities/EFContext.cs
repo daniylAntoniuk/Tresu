@@ -14,6 +14,10 @@ namespace DAL.Entities
 
         }
         public DbSet<Users> Users { get; set; }
-        public DbSet<UserFriends> UserFriends { get; set; }
+        //public DbSet<UserFriends> UserFriends { get; set; }
+        public DbSet<Games> Games { get; set; }
+        public DbSet<Skins> Skins { get; set; }
+        public DbSet<UserGames> UserGames { get; set; }
+        public DbSet<UserSkins> UserSkins { get; set; }
     }
 }

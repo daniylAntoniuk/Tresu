@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    [Table("tblUserGames")]
+    [Table("tblUserGame")]
     class UserGames
     {
         [Key]
@@ -17,12 +17,16 @@ namespace DAL.Entities
         [ForeignKey("UserOf")]
         public int UserId { get; set; }
 
-       
+        [ForeignKey("GameOf")]
+        public int GameId { get; set; }
+
+        public virtual Games GameOf { get; set; }
+
         [ForeignKey("UserSkinOf")]
-        public int UserSkinId { get; set; }
+        public int UserSkinsId { get; set; }
 
         public virtual Users UserOf { get; set; }
 
-        public virtual UserSkins SkinsOf { get; set; }
+        public virtual UserSkins UserSkinOf { get; set; }
     }
 }

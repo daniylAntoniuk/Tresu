@@ -8,20 +8,21 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    [Table("tblUserSkins")]
+    [Table("tblUserSkin")]
     class UserSkins
     {
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("UserGamesOf")]
-        public int UserGamesId { get; set; }
+        
 
         [ForeignKey("SkinOf")]
         public int SkinId { get; set; }
 
-        public virtual UserGames UserGamesOf { get; set; }
+       
 
-        public virtual Skins SkinsOf { get; set; }
+        public virtual Skins SkinOf { get; set; }
+
+        public virtual ICollection<UserGames> UserGames { get; set; }
     }
 }
