@@ -19,7 +19,7 @@ namespace DAL.Entities
         [ForeignKey("SkinOf")]
         public int SkinId { get; set; }
 
-       
+        
 
         public virtual Skins SkinOf { get; set; }
 

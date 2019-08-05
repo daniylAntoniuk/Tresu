@@ -23,7 +23,7 @@ namespace DAL.Entities
         [Required]
         public string Password { get; set; }
 
-        //public virtual ICollection<UserFriends> UserFriends { get; set; }
+        public virtual ICollection<UserFriends> UserFriends { get; set; }
 
         public virtual ICollection<UserGames> UserGames { get; set; }
     }

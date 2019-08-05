@@ -22,11 +22,9 @@ namespace DAL.Entities
 
         public virtual Games GameOf { get; set; }
 
-        [ForeignKey("UserSkinOf")]
-        public int UserSkinsId { get; set; }
-
+        
         public virtual Users UserOf { get; set; }
 
-        public virtual UserSkins UserSkinOf { get; set; }
+      
     }
 }

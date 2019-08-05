@@ -51,15 +51,15 @@ namespace DAL.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         UserId = c.Int(nullable: false),
                         GameId = c.Int(nullable: false),
-                        UserSkinsId = c.Int(nullable: false),
+                        UserSkins_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.tblGame", t => t.GameId, cascadeDelete: true)
                 .ForeignKey("dbo.tblUser", t => t.UserId, cascadeDelete: true)
-                .ForeignKey("dbo.tblUserSkin", t => t.UserSkinsId, cascadeDelete: true)
+                .ForeignKey("dbo.tblUserSkin", t => t.UserSkins_Id)
                 .Index(t => t.UserId)
                 .Index(t => t.GameId)
-                .Index(t => t.UserSkinsId);
+                .Index(t => t.UserSkins_Id);
             
             CreateTable(
                 "dbo.tblUser",
@@ -76,12 +76,12 @@ namespace DAL.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.tblUserGame", "UserSkinsId", "dbo.tblUserSkin");
+            DropForeignKey("dbo.tblUserGame", "UserSkins_Id", "dbo.tblUserSkin");
             DropForeignKey("dbo.tblUserGame", "UserId", "dbo.tblUser");
             DropForeignKey("dbo.tblUserGame", "GameId", "dbo.tblGame");
             DropForeignKey("dbo.tblUserSkin", "SkinId", "dbo.tblSkin");
             DropForeignKey("dbo.tblSkin", "GameId", "dbo.tblGame");
-            DropIndex("dbo.tblUserGame", new[] { "UserSkinsId" });
+            DropIndex("dbo.tblUserGame", new[] { "UserSkins_Id" });
             DropIndex("dbo.tblUserGame", new[] { "GameId" });
             DropIndex("dbo.tblUserGame", new[] { "UserId" });
             DropIndex("dbo.tblUserSkin", new[] { "SkinId" });

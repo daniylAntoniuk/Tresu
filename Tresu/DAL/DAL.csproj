@@ -55,9 +55,9 @@
     <Compile Include="Entities\UserGames.cs" />
     <Compile Include="Entities\Users.cs" />
     <Compile Include="Entities\UserSkins.cs" />
-    <Compile Include="Migrations\201908041758518_InitializeDB.cs" />
-    <Compile Include="Migrations\201908041758518_InitializeDB.Designer.cs">
-      <DependentUpon>201908041758518_InitializeDB.cs</DependentUpon>
+    <Compile Include="Migrations\201908051702387_InitializeDB.cs" />
+    <Compile Include="Migrations\201908051702387_InitializeDB.Designer.cs">
+      <DependentUpon>201908051702387_InitializeDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +70,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908041758518_InitializeDB.resx">
-      <DependentUpon>201908041758518_InitializeDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908051702387_InitializeDB.resx">
+      <DependentUpon>201908051702387_InitializeDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

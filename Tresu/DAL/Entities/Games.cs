@@ -27,6 +27,8 @@ namespace DAL.Entities
 
         public virtual ICollection<Skins> Skins { get; set; }
 
+       
+
         public virtual ICollection<UserGames> UserGames { get; set; }
     }
 }
