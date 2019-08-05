@@ -74,6 +74,9 @@
     <Compile Include="TresuMainWindow.xaml.cs">
       <DependentUpon>TresuMainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowRegister2.xaml.cs">
+      <DependentUpon>WindowRegister2.xaml</DependentUpon>
+    </Compile>
     <Page Include="ForgotPassWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TresuMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowRegister2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +141,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{bbd8e95a-452a-4dad-b5da-2ade659701a5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{b9e4cef8-3f4e-453f-abc0-abfbcac08ed6}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

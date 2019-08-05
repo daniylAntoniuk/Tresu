@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Entities
 {
     [Table("tblUserGame")]
-    class UserGames
+    public class UserGames
     {
         [Key]
         public int Id { get; set; }

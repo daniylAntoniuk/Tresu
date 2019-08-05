@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    class EFContext:DbContext
+   public class EFContext:DbContext
     {
         public EFContext() : base("TresuConnection")
         {

@@ -10,15 +10,16 @@ using System.Threading.Tasks;
 namespace DAL.Entities
 {
     [Table("tblUserFriend")]
-    class UserFriends
+    public class UserFriends
     {
+        
+        
         [Key]
-        [Column(Order = 1)]
+        public int Id { get; set; }
+
         [ForeignKey("UserOf")]
         public int UserId { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
         [ForeignKey("FriendOf")]
         public int FriendId { get; set; }
 

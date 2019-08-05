@@ -33,7 +33,7 @@
             <PasswordBox Width="200" x:Name="RepeatPasswordBox" HorizontalAlignment="Left"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" >
-            <Button Content="Register" Height="Auto" Width="108" HorizontalAlignment="Right" Margin="0,0,0,24"/>
+            <Button Content="Register" Click="Button_Register" Height="Auto" Width="108" HorizontalAlignment="Right" Margin="0,0,0,24"/>
         </StackPanel>
     </Grid>
 </Window>
