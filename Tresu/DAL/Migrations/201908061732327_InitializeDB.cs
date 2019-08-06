@@ -69,8 +69,20 @@ namespace DAL.Migrations
                         Email = c.String(nullable: false),
                         Login = c.String(nullable: false, maxLength: 100),
                         Password = c.String(nullable: false),
+                        Balance = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.tblFriend",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        UserId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.tblUser", t => t.UserId, cascadeDelete: true)
+                .Index(t => t.UserId);
             
         }
         
@@ -78,14 +90,17 @@ namespace DAL.Migrations
         {
             DropForeignKey("dbo.tblUserGame", "UserSkins_Id", "dbo.tblUserSkin");
             DropForeignKey("dbo.tblUserGame", "UserId", "dbo.tblUser");
+            DropForeignKey("dbo.tblFriend", "UserId", "dbo.tblUser");
             DropForeignKey("dbo.tblUserGame", "GameId", "dbo.tblGame");
             DropForeignKey("dbo.tblUserSkin", "SkinId", "dbo.tblSkin");
             DropForeignKey("dbo.tblSkin", "GameId", "dbo.tblGame");
+            DropIndex("dbo.tblFriend", new[] { "UserId" });
             DropIndex("dbo.tblUserGame", new[] { "UserSkins_Id" });
             DropIndex("dbo.tblUserGame", new[] { "GameId" });
             DropIndex("dbo.tblUserGame", new[] { "UserId" });
             DropIndex("dbo.tblUserSkin", new[] { "SkinId" });
             DropIndex("dbo.tblSkin", new[] { "GameId" });
+            DropTable("dbo.tblFriend");
             DropTable("dbo.tblUser");
             DropTable("dbo.tblUserGame");
             DropTable("dbo.tblUserSkin");

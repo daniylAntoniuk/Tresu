@@ -35,7 +35,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" >
 
             <Button Content="Register" Click="ButtonReg_Click"  Height="Auto" Width="120" HorizontalAlignment="Right"/>
-            <Button Content="Login"  Height="Auto" Width="120" HorizontalAlignment="Left" Margin="40,0,0,0"/>
+            <Button Content="Login"  Click="ButtonLog_Click" Height="Auto" Width="120" HorizontalAlignment="Left" Margin="40,0,0,0"/>
 
         </StackPanel>
         <Label  Cursor="Hand" MouseLeftButtonDown="Forgot_Password" Content="Forgot password ?" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="0,20,0,0"

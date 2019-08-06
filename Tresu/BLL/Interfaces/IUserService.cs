@@ -10,5 +10,6 @@ namespace BLL.Interfaces
     public interface IUserService
     {
         void Register(UserRegisterModel user);
+        int Login(UserLoginModel user);
     }
 }

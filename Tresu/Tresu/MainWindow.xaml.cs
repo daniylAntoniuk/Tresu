@@ -38,5 +38,15 @@ namespace Tresu
             RegisterWindow window = new RegisterWindow();
             window.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonLog_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

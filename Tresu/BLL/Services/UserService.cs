@@ -19,6 +19,12 @@ namespace BLL.Services
         {
             _repository = new UserRepository(_context);
         }
+
+        public int Login(UserLoginModel user)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Register(UserRegisterModel user)
         {
             _repository.Add(new Users

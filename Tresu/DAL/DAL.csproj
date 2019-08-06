@@ -49,15 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\EFContext.cs" />
+    <Compile Include="Entities\Friend.cs" />
     <Compile Include="Entities\Games.cs" />
     <Compile Include="Entities\Skins.cs" />
     <Compile Include="Entities\UserFriends.cs" />
     <Compile Include="Entities\UserGames.cs" />
     <Compile Include="Entities\Users.cs" />
     <Compile Include="Entities\UserSkins.cs" />
-    <Compile Include="Migrations\201908051702387_InitializeDB.cs" />
-    <Compile Include="Migrations\201908051702387_InitializeDB.Designer.cs">
-      <DependentUpon>201908051702387_InitializeDB.cs</DependentUpon>
+    <Compile Include="Migrations\201908061732327_InitializeDB.cs" />
+    <Compile Include="Migrations\201908061732327_InitializeDB.Designer.cs">
+      <DependentUpon>201908061732327_InitializeDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,10 +69,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908051702387_InitializeDB.resx">
-      <DependentUpon>201908051702387_InitializeDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908061732327_InitializeDB.resx">
+      <DependentUpon>201908061732327_InitializeDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
