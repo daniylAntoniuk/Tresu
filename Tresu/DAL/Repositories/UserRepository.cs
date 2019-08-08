@@ -41,7 +41,7 @@ namespace DAL.Repositories
 
         public IEnumerable<Users> GetUsers()
         {
-            throw new NotImplementedException();
+            return _context.Users.AsEnumerable();
         }
     }
 }

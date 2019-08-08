@@ -22,7 +22,10 @@ namespace BLL.Services
 
         public int Login(UserLoginModel user)
         {
-            throw new NotImplementedException();
+            int id = _repository.GetUsers().FirstOrDefault(
+               u => u.Email == user.Email &&
+               u.Password == user.Password)?.Id ?? -1;
+            return id;
         }
 
         public void Register(UserRegisterModel user)
