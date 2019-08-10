@@ -34,9 +34,22 @@ namespace DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Edit(int id, Users user)
+        public bool Edit(int id, Users elem)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                var user = _context.Users.FirstOrDefault(t => t.Id == id);
+                user.Login = elem.Login;
+                user.Email = elem.Email;
+                user.Password = elem.Password;
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public IEnumerable<Users> GetUsers()

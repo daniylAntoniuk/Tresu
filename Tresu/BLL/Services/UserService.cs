@@ -39,5 +39,20 @@ namespace BLL.Services
             });
             
         }
+        public IEnumerable<Users> GetUsers()
+        {
+            return _repository.GetUsers();
+        }
+
+        public void ForgotPassword(int id, UserRegisterModel user)
+        {
+            _repository.Edit(id, new Users
+            {
+                Email = user.Email,
+                Login = user.Login,
+                Password = user.Password
+
+            });
+        }
     }
 }

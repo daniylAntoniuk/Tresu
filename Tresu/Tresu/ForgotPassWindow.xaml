@@ -18,7 +18,7 @@
         </StackPanel>
         <StackPanel Grid.Row="1"  Margin="20,0,0,0">
             <Label Content="Input your email :" FontSize="20"/>
-            <TextBox Width="200" x:Name="loginBox" HorizontalAlignment="Left"/>
+            <TextBox Width="200" x:Name="EmailBox" HorizontalAlignment="Left"/>
         </StackPanel>
         <Button Grid.Row="2" Click="ButtonSubmit" Content="Submit" Width="150" HorizontalAlignment="Right" Margin="0,0,20,0"/>
     </Grid>

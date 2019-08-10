@@ -29,31 +29,39 @@ namespace Tresu
         {
 
         }
-
+        int Code;
         private void ButtonSubmit(object sender, RoutedEventArgs e)
         {
             try
             {
+
+                
+                Random rand = new Random();
+                Code = rand.Next(10000, 99999);
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                 mail.From = new MailAddress("tresu.suport@gmail.com");
-                mail.To.Add(loginBox.Text);
+                mail.To.Add(EmailBox.Text);
                 mail.Subject = "Tresu support";
-                mail.Body = "Hello, you  sent us a message with changing your " +
-                    "password, if you don`t sent this write our support. Your new password :";
+                mail.Body = "Hello, you're changing password. " +
+                    "Your code is : " + Code.ToString();
 
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("tresu.suport@gmail.com", "Tresu8834");
                 SmtpServer.EnableSsl = true;
                 //Tresu8834s&
                 SmtpServer.Send(mail);
-                MessageBox.Show("Mail Sent");
+                //MessageBox.Show("Mail Sent");
+                ForgotPassWindow2 window = new ForgotPassWindow2(Code,EmailBox.Text);
+                window.ShowDialog();
                 this.Close();
+
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Mail wasn`t Send");
+                MessageBox.Show("Bad email !");
+                MessageBox.Show(ex.Message);
             }
         }
     }

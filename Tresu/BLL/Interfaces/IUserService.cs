@@ -1,4 +1,5 @@
 ﻿using BLL.Models;
+using DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace BLL.Interfaces
     {
         void Register(UserRegisterModel user);
         int Login(UserLoginModel user);
+        void ForgotPassword(int id, UserRegisterModel user);
+         IEnumerable<Users> GetUsers();
     }
 }
