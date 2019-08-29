@@ -35,18 +35,52 @@ namespace Tresu
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
-            ButtonCloseMenu.Visibility = Visibility.Visible;
-            ButtonOpenMenu.Visibility = Visibility.Collapsed;
+            logotip.Visibility = Visibility.Visible;
         }
 
         private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
         {
-            ButtonCloseMenu.Visibility = Visibility.Collapsed;
-            ButtonOpenMenu.Visibility = Visibility.Visible;
+            logotip.Visibility = Visibility.Hidden;
         }
         private void ItemMenu_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        //Shop
+        private void StackPanelShop_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        //Trade
+        private void StackPanelTrade_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        //Friends
+        private void StackPanelFriends_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        //Wed Site
+        private void StackPanelSite_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        //Credit Catd
+        private void StackPanelCredit_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        //Exit
+        private void StackPanel_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
         }
     }
 }
