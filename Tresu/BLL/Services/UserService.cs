@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
 using DAL.Repositories;
+using System.Windows;
 
 namespace BLL.Services
 {
@@ -22,9 +23,26 @@ namespace BLL.Services
 
         public int Login(UserLoginModel user)
         {
+
+            bool IsBanned = _repository.GetUsers().FirstOrDefault(
+               u => u.IsLocked == false).IsLocked;//?.IsLocked?? true;
+
             int id = _repository.GetUsers().FirstOrDefault(
-               u => u.Email == user.Email &&
-               u.Password == user.Password)?.Id ?? -1;
+                  u => u.Email == user.Email &&
+                  u.IsLocked==false &&
+                  u.Password == user.Password)?.Id ?? -1;
+
+            //int id = _repository.GetUsers().FirstOrDefault(
+            //   u => u.Email == user.Email &&
+            //   u.Password == user.Password)?.Id ?? -1;
+           
+            //if (id > 0)
+            //{
+            //}
+            //else
+            //{
+                //MessageBox.Show("Inccorect Email or Password !");
+            //}
             return id;
         }
 

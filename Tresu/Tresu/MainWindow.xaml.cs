@@ -50,20 +50,20 @@ namespace Tresu
 
         private void ButtonLog_Click(object sender, RoutedEventArgs e)
         {
-            
             int result = _userService.Login(new UserLoginModel()
             {
                 Email = loginBox.Text,
                 Password = passwordBox.Password
             });
-            if (result > 0)
+            if (result >0)
             {
                 this.Visibility = Visibility.Hidden;
                TresuMainWindow window = new TresuMainWindow(loginBox.Text);
-            window.ShowDialog();
+                window.ShowDialog();
                 if (window.ShowDialog() == true)
                 {
                     this.Visibility = Visibility.Visible;
+                    
                 }
                 else
                 {
@@ -73,6 +73,8 @@ namespace Tresu
             }
             else
             {
+                loginBox.Text = "";
+                passwordBox.Password = "";
                 MessageBox.Show("Inccorect Email or Password !");
             }
         }
