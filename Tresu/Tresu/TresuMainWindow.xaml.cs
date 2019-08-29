@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Interfaces;
+using BLL.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,16 @@ namespace Tresu
     /// </summary>
     public partial class TresuMainWindow : Window
     {
-        public TresuMainWindow()
+        private readonly IUserService _userService;
+        public TresuMainWindow(string email)
         {
             InitializeComponent();
+            _userService = new UserService();
+            txtLogin.Text= _userService.GetUsers().FirstOrDefault(
+               u => u.Email == email)?.Login;
+            txtBalance.Text = _userService.GetUsers().FirstOrDefault(
+               u => u.Email == email)?.Balance.ToString()+" $";
+
         }
     }
 }

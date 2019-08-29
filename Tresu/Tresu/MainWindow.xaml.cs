@@ -59,7 +59,7 @@ namespace Tresu
             if (result > 0)
             {
                 this.Visibility = Visibility.Hidden;
-               TresuMainWindow window = new TresuMainWindow();
+               TresuMainWindow window = new TresuMainWindow(loginBox.Text);
             window.ShowDialog();
                 if (window.ShowDialog() == true)
                 {

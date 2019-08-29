@@ -7,19 +7,28 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Background="White" ResizeMode="NoResize" Height="400" Width="400">
+        Background="White" ResizeMode="NoResize" Height="400" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="326*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="311*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="347*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="334*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="1" >
-            <Image Margin="5,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="50" Source="tresu_logo.png"/>
-            <Label Margin="-160,-50,0,0" Width="70" Content="Tresu" FontSize="22" FontWeight="Bold"/>
+        <StackPanel Grid.Row="0" Grid.Column="0" >
+            <Image Margin="5,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="50" Source="tresu_logo.png"/>
+            <Label Margin="50,-50,0,0" Width="70" Content="Tresu" FontSize="22" FontWeight="Bold"/>
         </StackPanel>
+    
+            
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            
+                <TextBlock x:Name="txtLogin" Text="Name" VerticalAlignment="Center" FontSize="23" FontWeight="Medium"  HorizontalAlignment="Right"/>
+            <TextBlock  x:Name="txtBalance" Text="Balance" VerticalAlignment="Center" FontSize="23" FontWeight="Medium"  HorizontalAlignment="Right" Margin="40,0,20,0"/>
+            
+        </StackPanel>
+        
     </Grid>
 </Window>

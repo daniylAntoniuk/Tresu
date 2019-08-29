@@ -25,7 +25,10 @@ namespace DAL.Entities
 
         public int Balance { get; set; }
 
+        [Required]
+        public bool IsLocked { get; set; }
 
+        public virtual ICollection<Lock> Locks { get; set; }
 
         public virtual ICollection<Friend> Friends { get; set; }
 

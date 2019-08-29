@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Interfaces;
+using BLL.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
@@ -20,9 +22,11 @@ namespace Tresu
     /// </summary>
     public partial class ForgotPassWindow : Window
     {
+        private readonly IUserService _userService;
         public ForgotPassWindow()
         {
             InitializeComponent();
+            _userService = new UserService();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,7 +38,7 @@ namespace Tresu
         {
             try
             {
-
+               
                 
                 Random rand = new Random();
                 Code = rand.Next(10000, 99999);

@@ -19,5 +19,6 @@ namespace DAL.Entities
         public DbSet<Skins> Skins { get; set; }
         public DbSet<UserGames> UserGames { get; set; }
         public DbSet<UserSkins> UserSkins { get; set; }
+        public DbSet<Lock> Locks { get; set; }
     }
 }
