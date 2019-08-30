@@ -68,7 +68,10 @@ namespace Tresu
         //Wed Site
         private void StackPanelSite_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            Website page1 = new Website();
+            // grid.Conten = page1;
+            frame.Content = page1;
+            //this.Content = page1;
         }
 
         //Credit Catd

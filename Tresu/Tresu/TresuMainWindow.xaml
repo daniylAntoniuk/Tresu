@@ -7,7 +7,13 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Background="White" ResizeMode="NoResize" Height="456" Width="674">
+         ResizeMode="NoResize" Height="556" Width="874">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#318CE7" Offset="0"/>
+            <GradientStop Color="#ACE5EE" Offset="0.567"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -30,21 +36,25 @@
             <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid>
+    <Grid Name="grid">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="469*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="51*"/>
             <ColumnDefinition Width="116*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Width="202" Margin="0,0,0,318">
+        <Border x:Name="border" Background="White" CornerRadius="25" Grid.ColumnSpan="2"  Grid.Row="1" Margin="77,0,5,5">
+            <Frame x:Name="frame"/>
+        </Border>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Width="202" Margin="0,0,0,1">
 
             <TextBlock x:Name="txtLogin" Text="Name" VerticalAlignment="Center" FontSize="23" FontWeight="Medium"  HorizontalAlignment="Right"/>
             <TextBlock  x:Name="txtBalance" Text="Balance" VerticalAlignment="Center" FontSize="23" FontWeight="Medium"  HorizontalAlignment="Right" Margin="40,0,20,0"/>
 
         </StackPanel>
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
+        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E" Grid.RowSpan="2">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>
@@ -61,7 +71,15 @@
                     <Image HorizontalAlignment="Left" Source="tresu_logo.png" Margin="5,5,0,5"/>
                     <Label Content="Tresu" Name="logotip"  FontSize="24" Grid.Column="0" Margin="70,0,0,0" FontWeight="Bold"/>
                 </Grid>
-                <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="360" >
+                <ListView  x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="360" >
+                    <!--<ListView.Background>
+                        
+                        <LinearGradientBrush>
+                             <GradientStop Color="#318CE7" Offset="0"/>
+                              <GradientStop Color="#ACE5EE" Offset="0.567"/>
+                      </LinearGradientBrush>
+                    </ListView.Background>-->
+
                     <ListViewItem PreviewMouseDown="ItemMenu_PreviewMouseDown" x:Name="ItemCatalog" Height="60">
                         <StackPanel PreviewMouseDown="StackPanelShop_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="ShoppingCart" Height="25" Width="25" Margin="17"/>
@@ -91,7 +109,7 @@
                             <materialDesign:PackIcon Kind="CreditCard" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Credit Card" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
-                    </ListViewItem> 
+                    </ListViewItem>
                     <ListViewItem  Height="60">
                         <StackPanel PreviewMouseDown="StackPanel_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="ExitToApp" Height="25" Width="25" Margin="17"/>
@@ -101,5 +119,8 @@
                 </ListView>
             </StackPanel>
         </Grid>
+        <!--<WebBrowser Source="http://bomzpyure.pp.ua" Height="400" Margin="132,92,72,55" Grid.ColumnSpan="2" />-->
     </Grid>
+
+
 </Window>
