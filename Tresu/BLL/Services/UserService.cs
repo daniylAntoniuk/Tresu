@@ -79,6 +79,11 @@ namespace BLL.Services
             string res = _repository.GetLocks().FirstOrDefault(
                   l => l.UserId == id &&
                   l.UnlockTime > DateTime.Now)?.Reason ;
+            if(_repository.GetLocks().FirstOrDefault(
+                   l => l.UserId == id)?.UnlockTime < DateTime.Now)
+            {
+                res = "date";
+            }
             return res;
         }
 

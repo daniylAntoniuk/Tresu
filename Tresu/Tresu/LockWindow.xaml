@@ -1,0 +1,25 @@
+﻿<Window x:Class="Tresu.LockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tresu"
+        mc:Ignorable="d"
+        Title="Lock"  ResizeMode="NoResize" Height="200" Width="400">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#318CE7" Offset="0"/>
+            <GradientStop Color="#ACE5EE" Offset="0.567"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"  Background="White" CornerRadius="20" Margin="15" >
+            <TextBlock TextWrapping="Wrap" x:Name="txt" FontSize="14" Text="Your account was banned! Reason : ssscss , more info : bomzpyure.pp.ua, tresu.suport@gmail.com" Margin="20,20,20,0"/>
+        </Border>
+        <Button Click="Button_Click" BorderBrush="Red" Grid.Row="1" Background="Red" Content="Exit" HorizontalAlignment="Right" Margin="0,0,15,10"/>
+    </Grid>
+</Window>

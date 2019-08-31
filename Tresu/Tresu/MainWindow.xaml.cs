@@ -79,9 +79,28 @@ namespace Tresu
                     Email = loginBox.Text,
                     Password = passwordBox.Password
                 });
+                if (_userService.GetLockReason(id) =="date")
+                {
+                    //this.Visibility = Visibility.Hidden;
+                    TresuMainWindow window = new TresuMainWindow(loginBox.Text);
+                    window.ShowDialog();
+                    //if (window.ShowDialog() == true)
+                    //{
+                    //    this.Visibility = Visibility.Visible;
+
+                    //}
+                    //else
+                    //{
+                    //    this.Close();
+                    //}
+                    return;
+                }
                 if (_userService.GetLockReason(id)!=null)
                 {
-                    MessageBox.Show($"Your account was banned! Reason : {_userService.GetLockReason(id)}, more info : bomzpyure.pp.ua, tresu.suport@gmail.com");
+
+                   // MessageBox.Show($"Your account was banned! Reason : {_userService.GetLockReason(id)}, more info : bomzpyure.pp.ua, tresu.suport@gmail.com");
+                    LockWindow window = new LockWindow($"Your account was banned! Reason : {_userService.GetLockReason(id)}, more info : bomzpyure.pp.ua, tresu.suport@gmail.com");
+                    window.ShowDialog();
                 }
                 else
                 {
