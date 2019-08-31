@@ -57,6 +57,7 @@ namespace Tresu
             });
             if (result >0)
             {
+                
                 this.Visibility = Visibility.Hidden;
                TresuMainWindow window = new TresuMainWindow(loginBox.Text);
                 window.ShowDialog();
@@ -73,9 +74,22 @@ namespace Tresu
             }
             else
             {
+                int id=_userService.LoginTrue(new UserLoginModel()
+                {
+                    Email = loginBox.Text,
+                    Password = passwordBox.Password
+                });
+                if (_userService.GetLockReason(id)!=null)
+                {
+                    MessageBox.Show($"Your account was banned! Reason : {_userService.GetLockReason(id)}, more info : bomzpyure.pp.ua, tresu.suport@gmail.com");
+                }
+                else
+                {
+                    MessageBox.Show("Inccorect Email or Password !");
+                }
                 loginBox.Text = "";
                 passwordBox.Password = "";
-                MessageBox.Show("Inccorect Email or Password !");
+              
             }
         }
     }

@@ -24,9 +24,9 @@ namespace BLL.Services
         public int Login(UserLoginModel user)
         {
 
-            bool IsBanned = _repository.GetUsers().FirstOrDefault(
-               u => u.IsLocked == false).IsLocked;//?.IsLocked?? true;
-
+            //bool IsBanned = _repository.GetUsers().FirstOrDefault(
+            //   u => u.IsLocked == false).IsLocked;//?.IsLocked?? true;
+            
             int id = _repository.GetUsers().FirstOrDefault(
                   u => u.Email == user.Email &&
                   u.IsLocked==false &&
@@ -64,6 +64,7 @@ namespace BLL.Services
 
         public void ForgotPassword(int id, UserRegisterModel user)
         {
+            
             _repository.Edit(id, new Users
             {
                 Email = user.Email,
@@ -71,6 +72,22 @@ namespace BLL.Services
                 Password = user.Password
 
             });
+        }
+
+        public string GetLockReason(int id)
+        {
+            string res = _repository.GetLocks().FirstOrDefault(
+                  l => l.UserId == id &&
+                  l.UnlockTime > DateTime.Now)?.Reason ;
+            return res;
+        }
+
+        public int LoginTrue(UserLoginModel user)
+        {
+            int id = _repository.GetUsers().FirstOrDefault(
+                 u => u.Email == user.Email &&
+                 u.Password == user.Password)?.Id ?? -1;
+            return id;
         }
     }
 }

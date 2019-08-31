@@ -56,5 +56,10 @@ namespace DAL.Repositories
         {
             return _context.Users.AsEnumerable();
         }
+        public IEnumerable<Lock> GetLocks()
+        {
+            return _context.Locks.AsEnumerable();
+            
+        }
     }
 }

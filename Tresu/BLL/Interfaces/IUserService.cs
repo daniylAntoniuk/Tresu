@@ -12,7 +12,9 @@ namespace BLL.Interfaces
     {
         void Register(UserRegisterModel user);
         int Login(UserLoginModel user);
+        int LoginTrue(UserLoginModel user);
         void ForgotPassword(int id, UserRegisterModel user);
          IEnumerable<Users> GetUsers();
+        string GetLockReason(int id);
     }
 }
