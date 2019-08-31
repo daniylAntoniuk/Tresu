@@ -71,7 +71,7 @@
                     <Image HorizontalAlignment="Left" Source="tresu_logo.png" Margin="5,5,0,5"/>
                     <Label Content="Tresu" Name="logotip"  FontSize="24" Grid.Column="0" Margin="70,0,0,0" FontWeight="Bold"/>
                 </Grid>
-                <ListView  x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="360" >
+                <ListView  x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="464" >
                     <!--<ListView.Background>
                         
                         <LinearGradientBrush>
@@ -90,6 +90,12 @@
                         <StackPanel PreviewMouseDown="StackPanelTrade_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="Sync" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Trade" VerticalAlignment="Center"  Width="100" Margin="40,-59,0,0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemLibrary" Height="60">
+                        <StackPanel PreviewMouseDown="StackPanelTrade_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="GamepadVariant" Height="25" Width="25" Margin="17"/>
+                            <TextBlock Text="Library" VerticalAlignment="Center"  Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="60">

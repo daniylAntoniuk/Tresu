@@ -105,8 +105,10 @@ namespace Tresu
                 else
                 {
                     MessageBox.Show("Inccorect Email or Password !");
+                    loginBox.BorderBrush = Brushes.Red;
+                    passwordBox.BorderBrush = Brushes.Red;
                 }
-                loginBox.Text = "";
+               
                 passwordBox.Password = "";
               
             }
