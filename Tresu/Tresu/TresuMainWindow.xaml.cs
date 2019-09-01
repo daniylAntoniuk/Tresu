@@ -62,7 +62,9 @@ namespace Tresu
         //Friends
         private void StackPanelFriends_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            AddFriendPage add = new AddFriendPage();
+            frame.Content = add;
+           
         }
 
         //Wed Site

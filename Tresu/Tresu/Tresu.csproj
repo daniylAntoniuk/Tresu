@@ -68,12 +68,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddFriendPage.xaml.cs">
+      <DependentUpon>AddFriendPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassWindow2.xaml.cs">
       <DependentUpon>ForgotPassWindow2.xaml</DependentUpon>
     </Compile>
     <Compile Include="LockWindow.xaml.cs">
       <DependentUpon>LockWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewItem.cs" />
     <Compile Include="Website.xaml.cs">
       <DependentUpon>Website.xaml</DependentUpon>
     </Compile>
@@ -86,6 +90,10 @@
     <Compile Include="WindowRegister2.xaml.cs">
       <DependentUpon>WindowRegister2.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddFriendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ForgotPassWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,9 +168,7 @@
   <ItemGroup>
     <Resource Include="tresu_logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{bbd8e95a-452a-4dad-b5da-2ade659701a5}</Project>
