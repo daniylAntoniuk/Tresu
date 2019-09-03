@@ -14,7 +14,8 @@ namespace BLL.Interfaces
         int Login(UserLoginModel user);
         int LoginTrue(UserLoginModel user);
         void ForgotPassword(int id, UserRegisterModel user);
-         IEnumerable<Users> GetUsers();
+        IEnumerable<Users> GetUsers();
         string GetLockReason(int id);
+        UserModel FindByEmail(string email);
     }
 }

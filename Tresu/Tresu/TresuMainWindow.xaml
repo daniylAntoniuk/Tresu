@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" 
-         ResizeMode="NoResize" Height="556" Width="874">
+          Height="556" Width="874">
     <Window.Background>
         <LinearGradientBrush>
             <GradientStop Color="#318CE7" Offset="0"/>
@@ -46,7 +46,7 @@
             <ColumnDefinition Width="116*"/>
         </Grid.ColumnDefinitions>
         <Border x:Name="border" Background="White" CornerRadius="25" Grid.ColumnSpan="2"  Grid.Row="1" Margin="77,0,5,5">
-            <Frame x:Name="frame" />
+            <Frame NavigationUIVisibility="Hidden" Panel.ZIndex="0" x:Name="frame" />
         </Border>
         <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Width="202" Margin="0,0,0,1">
 
@@ -71,7 +71,7 @@
                     <Image HorizontalAlignment="Left" Source="tresu_logo.png" Margin="5,5,0,5"/>
                     <Label Content="Tresu" Name="logotip"  FontSize="24" Grid.Column="0" Margin="70,0,0,0" FontWeight="Bold"/>
                 </Grid>
-                <ListView  x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="464" >
+                <ListView Panel.ZIndex="1" x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="464" >
                     <!--<ListView.Background>
                         
                         <LinearGradientBrush>
@@ -86,37 +86,37 @@
                             <TextBlock Text="Shop" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemHome" Height="60">
+                    <ListViewItem  PreviewMouseDown="StackPanelTrade_PreviewMouseDown" x:Name="ItemHome" Height="60">
                         <StackPanel PreviewMouseDown="StackPanelTrade_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="Sync" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Trade" VerticalAlignment="Center"  Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemLibrary" Height="60">
+                    <ListViewItem PreviewMouseDown="StackPanelTrade_PreviewMouseDown" x:Name="ItemLibrary" Height="60">
                         <StackPanel PreviewMouseDown="StackPanelTrade_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="GamepadVariant" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Library" VerticalAlignment="Center"  Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemCreate" Height="60">
+                    <ListViewItem PreviewMouseDown="StackPanelFriends_PreviewMouseDown" x:Name="ItemCreate" Height="60">
                         <StackPanel PreviewMouseDown="StackPanelFriends_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="HumanMale" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Friends" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
+                    <ListViewItem PreviewMouseDown="StackPanelSite_PreviewMouseDown" Height="60">
                         <StackPanel PreviewMouseDown="StackPanelSite_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="Web" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Website" VerticalAlignment="Center"  Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem  Height="60">
+                    <ListViewItem PreviewMouseDown="StackPanelCredit_PreviewMouseDown" Height="60">
                         <StackPanel PreviewMouseDown="StackPanelCredit_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="CreditCard" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Credit Card" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem  Height="60">
+                    <ListViewItem PreviewMouseDown="StackPanel_PreviewMouseDown" Height="60">
                         <StackPanel PreviewMouseDown="StackPanel_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="ExitToApp" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Exit" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>

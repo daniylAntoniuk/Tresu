@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 namespace DAL.Repositories
 {
-    public class UserRepository : ITresuRepository<Users>
+    public class UserRepository : IUserRepository
     {
         private readonly EFContext _context;
         public UserRepository(EFContext context)
@@ -56,10 +56,20 @@ namespace DAL.Repositories
         {
             return _context.Users.AsEnumerable();
         }
-        public IEnumerable<Lock> GetLocks()
+
+        public Users FindByEmail(string email)
         {
-            return _context.Locks.AsEnumerable();
-            
+            return _context.Users.FirstOrDefault(t => t.Email == email);
+        }
+
+        public Users FindById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Lock> GetUserLocks(int id)
+        {
+            return _context.Users.FirstOrDefault(t => t.Id == id)?.Locks;
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Tresu
             {
                 
                 this.Visibility = Visibility.Hidden;
-               TresuMainWindow window = new TresuMainWindow(loginBox.Text);
+                TresuMainWindow window = new TresuMainWindow(loginBox.Text);
                 window.ShowDialog();
                 if (window.ShowDialog() == true)
                 {
@@ -79,7 +79,17 @@ namespace Tresu
                     Email = loginBox.Text,
                     Password = passwordBox.Password
                 });
-                if (_userService.GetLockReason(id) =="date")
+                if(id<=0)
+                {
+                    MessageBox.Show("Inccorect Email or Password !");
+                    loginBox.BorderBrush = Brushes.Red;
+                    passwordBox.BorderBrush = Brushes.Red;
+                    passwordBox.Password = "";
+                    return;
+                }
+                string check = _userService.GetLockReason(id);
+
+                if (check == "date")
                 {
                     //this.Visibility = Visibility.Hidden;
                     TresuMainWindow window = new TresuMainWindow(loginBox.Text);
@@ -95,14 +105,14 @@ namespace Tresu
                     //}
                     return;
                 }
-                if (_userService.GetLockReason(id)!=null)
+                if (check != null)
                 {
 
                    // MessageBox.Show($"Your account was banned! Reason : {_userService.GetLockReason(id)}, more info : bomzpyure.pp.ua, tresu.suport@gmail.com");
-                    LockWindow window = new LockWindow($"Your account was banned! Reason : {_userService.GetLockReason(id)}, more info : bomzpyure.pp.ua, tresu.suport@gmail.com");
+                    LockWindow window = new LockWindow($"Your account was banned! Reason : {check}, more info : bomzpyure.pp.ua, tresu.suport@gmail.com");
                     window.ShowDialog();
                 }
-                else
+                else if(check == null)
                 {
                     MessageBox.Show("Inccorect Email or Password !");
                     loginBox.BorderBrush = Brushes.Red;

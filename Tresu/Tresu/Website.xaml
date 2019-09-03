@@ -11,10 +11,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="81*"/>
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="96*"/>
-            <ColumnDefinition Width="610*"/>
+
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="353*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="22*"/>
@@ -22,14 +21,18 @@
         </Grid.RowDefinitions>
 
 
-        <Button Click="Button_Click"    Grid.Column="1" VerticalAlignment="Bottom" Height="50" Margin="10,0" >
-            <materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="25"/>
-        </Button>
+        <StackPanel Grid.Column="1" Orientation="Horizontal">
 
-        <WebBrowser Name="web" Source="http://bomzpyure.pp.ua" Margin="0,10,72,42" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" />
-        <Button Click="Button_Click_1" Height="50" VerticalAlignment="Bottom" Grid.Column="2" Margin="13,0,12,0"  >
-            <materialDesign:PackIcon Kind="ArrowRight" Height="25" Width="25"/>
-        </Button>
+            <Button Click="Button_Click"    Grid.Column="1" VerticalAlignment="Bottom" Height="40" Margin="10,0" >
+                <materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="25"/>
+            </Button>
+            <Button Click="Button_Click_1" Height="40" VerticalAlignment="Bottom" Grid.Column="2" Margin="13,0,12,0"  >
+                <materialDesign:PackIcon Kind="ArrowRight" Height="25" Width="25"/>
+            </Button>
+        </StackPanel>
+
+
+        <WebBrowser  Panel.ZIndex="0" Name="web" Source="http://bomzpyure.pp.ua" Margin="13,10,45,39" Grid.Row="1" Grid.Column="1" />
 
 
     </Grid>

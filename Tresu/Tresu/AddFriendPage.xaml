@@ -10,23 +10,23 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="331*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="22*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="13*"/>
             <RowDefinition Height="32*"/>
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1" Margin="0,0,0,40">
-            
-             <TextBox Width="500"/>
-            <Button Content="Search" Margin="40,0,0,0"/>
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1" Margin="0,0,0,40" Height="32">
+
+            <TextBox  x:Name="txt" Width="500"/>
+            <Button Click="Button_Click" Content="Search" Margin="40,0,0,0"/>
         </StackPanel>
         <ListView Name="listView" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding ViewItem}" Grid.Column="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-
+                        <TextBlock Text="{Binding Id}" Foreground="Black" FontSize="26"  VerticalAlignment="Center" Margin="0,0,30,0"/>
                         <Border Height="70" CornerRadius="15" Width="200">
                             <Border.Background>
                                 <LinearGradientBrush>
@@ -34,12 +34,14 @@
                                     <GradientStop Color="#ACE5EE" Offset="0.567"/>
                                 </LinearGradientBrush>
                             </Border.Background>
+                            
                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                
                                 <TextBlock Text="{Binding PlayerName}" Foreground="Black" FontSize="26"/>
                             </StackPanel>
                         </Border>
 
-                        <Button  VerticalAlignment="Center" Content="Add to friends" Margin="30,0,0,0"/>
+                        <Button  VerticalAlignment="Center" Click="Button_Click_1" Content="Add to friends" Margin="30,0,0,0"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

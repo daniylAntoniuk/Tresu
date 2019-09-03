@@ -1,4 +1,5 @@
 ﻿using BLL.Interfaces;
+using BLL.Models;
 using BLL.Services;
 using System;
 using System.Collections.Generic;
@@ -22,8 +23,19 @@ namespace Tresu
     public partial class TresuMainWindow : Window
     {
         private readonly IUserService _userService;
+        public TresuMainWindow()
+        {
+            string email = "danik22122005@gmail.com";
+            InitializeComponent();
+            _userService = new UserService();
+
+            UserModel model= _userService.FindByEmail(email);
+            txtLogin.Text = model.Login;
+            txtBalance.Text = model.Balance.ToString();
+        }
         public TresuMainWindow(string email)
         {
+           // email = "danik22122005@gmail.com";
             InitializeComponent();
             _userService = new UserService();
             txtLogin.Text= _userService.GetUsers().FirstOrDefault(

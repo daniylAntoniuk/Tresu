@@ -15,10 +15,22 @@ namespace BLL.Services
     public  class UserService : IUserService
     {
         private readonly EFContext _context = new EFContext();
-        private readonly ITresuRepository<Users> _repository;
+        private readonly IUserRepository _repository;
         public UserService()
         {
             _repository = new UserRepository(_context);
+        }
+
+        public UserModel FindByEmail(string email)
+        {
+            var temp= _repository.FindByEmail(email);
+            UserModel model = new UserModel()
+            {
+                Id = temp.Id,
+                Balance = temp.Balance,
+                Login = temp.Login
+            };
+            return model;
         }
 
         public int Login(UserLoginModel user)
@@ -76,15 +88,20 @@ namespace BLL.Services
 
         public string GetLockReason(int id)
         {
-            string res = _repository.GetLocks().FirstOrDefault(
-                  l => l.UserId == id &&
-                  l.UnlockTime > DateTime.Now)?.Reason ;
-            if(_repository.GetLocks().FirstOrDefault(
-                   l => l.UserId == id)?.UnlockTime < DateTime.Now)
+            var lockTemp=_repository.GetUserLocks(id).FirstOrDefault(l => l.UnlockTime > DateTime.Now);
+            var lockTemp2 = _repository.GetUserLocks(id).FirstOrDefault(l => l.UnlockTime < DateTime.Now);
+            if (lockTemp != null)
             {
-                res = "date";
+                return lockTemp.Reason;
             }
-            return res;
+            else if (lockTemp2 !=null)
+            {
+                return "date";
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public int LoginTrue(UserLoginModel user)
