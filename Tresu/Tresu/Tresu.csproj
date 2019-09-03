@@ -74,9 +74,13 @@
     <Compile Include="ForgotPassWindow2.xaml.cs">
       <DependentUpon>ForgotPassWindow2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GameLibraryPage.xaml.cs">
+      <DependentUpon>GameLibraryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LockWindow.xaml.cs">
       <DependentUpon>LockWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\LibraryItem.cs" />
     <Compile Include="Models\ViewItem.cs" />
     <Compile Include="Website.xaml.cs">
       <DependentUpon>Website.xaml</DependentUpon>
@@ -99,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ForgotPassWindow2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameLibraryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
