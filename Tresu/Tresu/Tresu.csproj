@@ -71,6 +71,9 @@
     <Compile Include="AddFriendPage.xaml.cs">
       <DependentUpon>AddFriendPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreditCardPage.xaml.cs">
+      <DependentUpon>CreditCardPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassWindow2.xaml.cs">
       <DependentUpon>ForgotPassWindow2.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
       <DependentUpon>WindowRegister2.xaml</DependentUpon>
     </Compile>
     <Page Include="AddFriendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreditCardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,7 +190,9 @@
   <ItemGroup>
     <Resource Include="tresu_logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="MasterCard.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{bbd8e95a-452a-4dad-b5da-2ade659701a5}</Project>
@@ -193,6 +202,9 @@
       <Project>{b9e4cef8-3f4e-453f-abc0-abfbcac08ed6}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="visa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
