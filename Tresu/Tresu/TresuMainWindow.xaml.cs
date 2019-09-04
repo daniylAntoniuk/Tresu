@@ -91,7 +91,8 @@ namespace Tresu
         //Credit Catd
         private void StackPanelCredit_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            CreditCardPage page = new CreditCardPage();
+            frame.Content = page;
         }
 
         //Exit
