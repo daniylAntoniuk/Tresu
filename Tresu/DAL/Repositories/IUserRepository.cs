@@ -12,5 +12,6 @@ namespace DAL.Repositories
         Users FindByEmail(string email);
         IEnumerable<Lock> GetUserLocks(int id);
         IEnumerable<UserGames> GetUserGames(int id);
+        IEnumerable<Games> GetGames(int id);
     }
 }

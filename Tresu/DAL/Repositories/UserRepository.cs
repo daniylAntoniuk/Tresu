@@ -75,5 +75,9 @@ namespace DAL.Repositories
         {
             return _context.Users.FirstOrDefault(t => t.Id == id)?.UserGames;
         }
+        public IEnumerable<Games> GetGames(int id)
+        {
+            return _context.Games.AsEnumerable();
+        }
     }
 }

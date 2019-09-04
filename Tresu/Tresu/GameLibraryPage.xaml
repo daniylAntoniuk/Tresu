@@ -10,37 +10,34 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="283*"/>
+            <ColumnDefinition Width="444*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="127*"/>
             <RowDefinition Height="323*"/>
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1" Margin="0,0,0,40" Height="32">
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1" Margin="0,0,0,40" Height="32" Grid.ColumnSpan="2">
 
             <TextBox  x:Name="txt" Width="500"/>
             <Button Click="Button_Click" Content="Search" Margin="40,0,0,0"/>
         </StackPanel>
-        <ListView Name="listView" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding ViewItem}" Grid.Column="1">
+        <Frame x:Name="frame" Grid.Column="3" Grid.Row="1"/>
+        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListView_SelectionChanged" Name="listView" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding ViewItem}" Grid.Column="1" Margin="0,0,8.645,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Border Height="70" CornerRadius="15" Width="200">
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#318CE7" Offset="0"/>
-                                    <GradientStop Color="#ACE5EE" Offset="0.567"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
 
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                    
+                        <StackPanel  VerticalAlignment="Center" Orientation="Horizontal">
+                            <Image Height="50" Width="50" HorizontalAlignment="Left" Source="{Binding Icon}"/>
+                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Right" Foreground="Black" FontSize="26" Margin="20,0,0,0"/>
+                            <!--<Button  VerticalAlignment="Center" Click="Button_Click_1" Content="Play" Margin="30,0,0,0"/>-->
+                        </StackPanel>
 
-                                <TextBlock Text="{Binding PlayerName}" Foreground="Black" FontSize="26"/>
-                            </StackPanel>
-                        </Border>
 
-                        <Button  VerticalAlignment="Center" Click="Button_Click_1" Content="Add to friends" Margin="30,0,0,0"/>
+                            <TextBlock Text="{Binding Description}" Visibility="Hidden"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

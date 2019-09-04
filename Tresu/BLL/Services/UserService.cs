@@ -73,7 +73,10 @@ namespace BLL.Services
         {
             return _repository.GetUsers();
         }
-
+        public IEnumerable<UserGames> GetUserGames(int id)
+        {
+            return _repository.GetUserGames(id);
+        }
         public void ForgotPassword(int id, UserRegisterModel user)
         {
             
@@ -110,6 +113,18 @@ namespace BLL.Services
                  u => u.Email == user.Email &&
                  u.Password == user.Password)?.Id ?? -1;
             return id;
+        }
+
+        public Games GetGames(int id)
+        {
+            var temp = _repository.GetGames(id).FirstOrDefault(t => t.Id == id);
+            Games g = new Games
+            {
+                Name = temp.Name,
+                Photo = temp.Photo,
+                Description = temp.Description
+            };
+            return  g;
         }
     }
 }

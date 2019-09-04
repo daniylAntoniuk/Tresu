@@ -77,6 +77,9 @@
     <Compile Include="GameLibraryPage.xaml.cs">
       <DependentUpon>GameLibraryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LibraryPage.xaml.cs">
+      <DependentUpon>LibraryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LockWindow.xaml.cs">
       <DependentUpon>LockWindow.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GameLibraryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LibraryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

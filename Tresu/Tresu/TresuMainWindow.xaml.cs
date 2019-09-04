@@ -68,7 +68,8 @@ namespace Tresu
         //Trade
         private void StackPanelTrade_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            GameLibraryPage page = new GameLibraryPage(1);
+            frame.Content = page;
         }
 
         //Friends
