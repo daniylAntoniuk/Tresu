@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Interfaces;
+using BLL.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +24,11 @@ namespace Tresu
     public partial class CreditCardPage : Page
     {
         int ID;
+        private readonly IUserService _userService;
         public CreditCardPage(int id)
         {
+            _userService = new UserService();
+
             ID = id;
             InitializeComponent();
             creditChoose.SelectedIndex = 0;
@@ -31,6 +36,7 @@ namespace Tresu
 
         private void CreditChoose_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
             if (creditChoose.SelectedIndex == 0)
             {
                 donate.Visibility = Visibility.Hidden;
@@ -55,7 +61,8 @@ namespace Tresu
                     {
                         if (match.Success)
                         {
-                            MessageBox.Show("OK");
+                        _userService.Donate(int.Parse(donate.Text), ID);
+                            MessageBox.Show("All done !");
                         }
                     }
                     else
@@ -68,7 +75,9 @@ namespace Tresu
             {
                 if (match.Success)
                 {
-                   MessageBox.Show("OK");
+                    _userService.Donate(int.Parse(donate.Text), ID);
+                    MessageBox.Show("All done !");
+
                 }
             }
             else

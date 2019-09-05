@@ -70,6 +70,8 @@ namespace Tresu
         //Trade
         private void StackPanelTrade_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            txtBalance.Text = _userService.GetUsers().FirstOrDefault(
+               u => u.Id == Id)?.Balance.ToString() + " $";
             GameLibraryPage page = new GameLibraryPage(Id);
             frame.Content = page;
         }
@@ -77,9 +79,10 @@ namespace Tresu
         //Friends
         private void StackPanelFriends_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            txtBalance.Text = _userService.GetUsers().FirstOrDefault(
+                u => u.Id == Id)?.Balance.ToString() + " $";
             AddFriendPage add = new AddFriendPage();
             frame.Content = add;
-           
         }
 
         //Wed Site
@@ -89,13 +92,16 @@ namespace Tresu
             // grid.Conten = page1;
             frame.Content = page1;
             //this.Content = page1;
+            txtBalance.Text = _userService.GetUsers().FirstOrDefault(
+               u => u.Id == Id)?.Balance.ToString() + " $";
         }
 
         //Credit Catd
         private void StackPanelCredit_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            CreditCardPage page = new CreditCardPage();
+            CreditCardPage page = new CreditCardPage(Id);
             frame.Content = page;
+            
         }
 
         //Exit

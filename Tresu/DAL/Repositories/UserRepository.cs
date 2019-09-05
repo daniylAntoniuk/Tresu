@@ -82,7 +82,8 @@ namespace DAL.Repositories
 
         public void Donate(int sum,int id)
         {
-            _context.Users.FirstOrDefault(t => t.Id == id).Balance = sum;
+            _context.Users.FirstOrDefault(t => t.Id == id).Balance += sum;
+            _context.SaveChanges();
         }
     }
 }
