@@ -37,7 +37,7 @@ namespace Tresu
 
                 //LibraryItem li = (LibraryItem)listView.SelectedItem;
                 if (Name == "Tresu Game")
-                    Process.Start(@"TresuGame\Tresu Game V1.1\Tresu Game.exe");
+                    Process.Start(Environment.CurrentDirectory+@"\..\..\TresuGame\Tresu Game V1.1\Tresu Game.exe");
                 else
                 {
                     MessageBox.Show("You can`t start this game");

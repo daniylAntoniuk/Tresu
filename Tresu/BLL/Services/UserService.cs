@@ -126,5 +126,10 @@ namespace BLL.Services
             };
             return  g;
         }
+
+        public void Donate(int sum, int id)
+        {
+            _repository.Donate(sum, id);
+        }
     }
 }

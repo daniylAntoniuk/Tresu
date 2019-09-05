@@ -79,5 +79,10 @@ namespace DAL.Repositories
         {
             return _context.Games.AsEnumerable();
         }
+
+        public void Donate(int sum,int id)
+        {
+            _context.Users.FirstOrDefault(t => t.Id == id).Balance = sum;
+        }
     }
 }

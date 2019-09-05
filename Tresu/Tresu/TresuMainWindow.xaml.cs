@@ -22,6 +22,7 @@ namespace Tresu
     /// </summary>
     public partial class TresuMainWindow : Window
     {
+        int Id;
         private readonly IUserService _userService;
         public TresuMainWindow()
         {
@@ -33,11 +34,12 @@ namespace Tresu
             txtLogin.Text = model.Login;
             txtBalance.Text = model.Balance.ToString();
         }
-        public TresuMainWindow(string email)
+        public TresuMainWindow(string email,int id)
         {
            // email = "danik22122005@gmail.com";
             InitializeComponent();
             _userService = new UserService();
+            Id = id;
             txtLogin.Text= _userService.GetUsers().FirstOrDefault(
                u => u.Email == email)?.Login;
             txtBalance.Text = _userService.GetUsers().FirstOrDefault(
@@ -68,7 +70,7 @@ namespace Tresu
         //Trade
         private void StackPanelTrade_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            GameLibraryPage page = new GameLibraryPage(1);
+            GameLibraryPage page = new GameLibraryPage(Id);
             frame.Content = page;
         }
 

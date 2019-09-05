@@ -19,5 +19,6 @@ namespace BLL.Interfaces
         UserModel FindByEmail(string email);
         IEnumerable<UserGames> GetUserGames(int id);
         Games GetGames(int id);
+        void Donate(int sum,int id);
     }
 }

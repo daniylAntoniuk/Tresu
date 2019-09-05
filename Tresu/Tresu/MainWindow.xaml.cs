@@ -59,17 +59,11 @@ namespace Tresu
             {
                 
                 this.Visibility = Visibility.Hidden;
-                TresuMainWindow window = new TresuMainWindow(loginBox.Text);
+                TresuMainWindow window = new TresuMainWindow(loginBox.Text,result);
                 window.ShowDialog();
-                if (window.ShowDialog() == true)
-                {
-                    this.Visibility = Visibility.Visible;
-                    
-                }
-                else
-                {
+                
                     this.Close();
-                }
+                
 
             }
             else
@@ -92,7 +86,7 @@ namespace Tresu
                 if (check == "date")
                 {
                     //this.Visibility = Visibility.Hidden;
-                    TresuMainWindow window = new TresuMainWindow(loginBox.Text);
+                    TresuMainWindow window = new TresuMainWindow(loginBox.Text,id);
                     window.ShowDialog();
                     //if (window.ShowDialog() == true)
                     //{

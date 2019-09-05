@@ -21,8 +21,10 @@ namespace Tresu
     /// </summary>
     public partial class CreditCardPage : Page
     {
-        public CreditCardPage()
+        int ID;
+        public CreditCardPage(int id)
         {
+            ID = id;
             InitializeComponent();
             creditChoose.SelectedIndex = 0;
         }

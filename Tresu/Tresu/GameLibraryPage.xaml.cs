@@ -28,10 +28,11 @@ namespace Tresu
        
         List<LibraryItem> l = new List<LibraryItem>();
         private readonly IUserService _userService;
+        int Id;
         public GameLibraryPage(int id)
         {
             InitializeComponent();
-
+            Id = id;
             _userService = new UserService();
 
             List<int> GameId = new List<int>();
@@ -45,7 +46,7 @@ namespace Tresu
                 var temp = _userService.GetGames(el);
                 LibraryItem lvi = new LibraryItem();
                 lvi.Name = temp.Name ;
-                lvi.Icon = new BitmapImage(new Uri(Environment.CurrentDirectory+@"/Images/" + temp.Photo ));
+                lvi.Icon = new BitmapImage(new Uri(Environment.CurrentDirectory+@"/../../Images/" + temp.Photo ));
                 lvi.Description = temp.Description;
                 l.Add(lvi);
             }
@@ -55,15 +56,15 @@ namespace Tresu
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //var temp = _userService.GetUsers();
-            l.Clear();
-            listView.ItemsSource = null;
-            //listView.Items.Clear();
-            ViewItem lvi = new ViewItem();
-            string s = _userService.GetUsers().FirstOrDefault(t => t.Login == txt.Text)?.Login;
-            lvi.PlayerName = s;
-            //l.Add(lvi);
-            listView.ItemsSource = l;
+            ////var temp = _userService.GetUsers();
+            //l.Clear();
+            //listView.ItemsSource = null;
+            ////listView.Items.Clear();
+            //ViewItem lvi = new ViewItem();
+            //string s = _userService.GetUserGames(id).FirstOrDefault(t => t.Login == txt.Text)?.Login;
+            //lvi.PlayerName = s;
+            ////l.Add(lvi);
+            //listView.ItemsSource = l;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

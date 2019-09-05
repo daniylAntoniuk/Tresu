@@ -13,5 +13,6 @@ namespace DAL.Repositories
         IEnumerable<Lock> GetUserLocks(int id);
         IEnumerable<UserGames> GetUserGames(int id);
         IEnumerable<Games> GetGames(int id);
+        void Donate(int sum,int id);
     }
 }
