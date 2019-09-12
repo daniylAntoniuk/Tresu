@@ -35,7 +35,7 @@
             <Label Content="Login :" FontSize="20"/>
             <TextBox Width="200" x:Name="LoginBox" HorizontalAlignment="Left"/>
             <Label Content="Password :" FontSize="20"/>
-            <PasswordBox Width="200" x:Name="PasswordBox" HorizontalAlignment="Left"/>
+            <PasswordBox Width="200" x:Name="passwordBox" HorizontalAlignment="Left"/>
             <Label Content="Repeat Password :" FontSize="20"/>
             <PasswordBox Width="200" x:Name="RepeatPasswordBox" HorizontalAlignment="Left"/>
         </StackPanel>

@@ -109,5 +109,10 @@ namespace Tresu
         {
             this.Close();
         }
+
+        private void StackPanelFB_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

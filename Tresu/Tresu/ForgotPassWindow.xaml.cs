@@ -22,6 +22,7 @@ namespace Tresu
     /// </summary>
     public partial class ForgotPassWindow : Window
     {
+
         private readonly IUserService _userService;
         public ForgotPassWindow()
         {

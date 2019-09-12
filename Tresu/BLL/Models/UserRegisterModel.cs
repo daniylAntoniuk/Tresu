@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Models
 {
-   public  class UserRegisterModel
+   public class UserRegisterModel
     {
         public string Login { get; set; }
 

@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" 
-          Height="556" Width="874" ResizeMode="NoResize">
+          Height="573.333" Width="874" ResizeMode="NoResize">
     <Window.Background>
         <LinearGradientBrush>
             <GradientStop Color="#318CE7" Offset="0"/>
@@ -71,7 +71,7 @@
                     <Image HorizontalAlignment="Left" Source="tresu_logo.png" Margin="5,5,0,5"/>
                     <Label Content="Tresu" Name="logotip"  FontSize="24" Grid.Column="0" Margin="70,0,0,0" FontWeight="Bold"/>
                 </Grid>
-                <ListView Panel.ZIndex="1" x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="464" >
+                <ListView Panel.ZIndex="1" x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="481" >
                     <!--<ListView.Background>
                         
                         <LinearGradientBrush>
@@ -114,6 +114,12 @@
                         <StackPanel PreviewMouseDown="StackPanelCredit_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="CreditCard" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Credit Card" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem PreviewMouseDown="StackPanelFB_PreviewMouseDown" Height="60">
+                        <StackPanel PreviewMouseDown="StackPanelFB_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="17"/>
+                            <TextBlock Text="Feedback" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem PreviewMouseDown="StackPanel_PreviewMouseDown" Height="60">
