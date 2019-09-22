@@ -34,7 +34,7 @@ namespace Tresu
             InitializeComponent();
             Id = id;
             _userService = new UserService();
-
+            
             List<int> GameId = new List<int>();
             foreach (UserGames el in _userService.GetUserGames(id))
             {

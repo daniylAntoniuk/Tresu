@@ -3,6 +3,7 @@ using BLL.Models;
 using BLL.Services;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace Tresu
         {
             InitializeComponent();
             _userService = new UserService();
+           // Process.Start("http://www.google.com");
         }
 
 
@@ -63,7 +65,7 @@ namespace Tresu
                 window.ShowDialog();
                 
                     this.Close();
-                
+               
 
             }
             else
