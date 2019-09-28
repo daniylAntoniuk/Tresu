@@ -76,6 +76,9 @@
     <Compile Include="CreditCardPage.xaml.cs">
       <DependentUpon>CreditCardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FeedbackPage.xaml.cs">
+      <DependentUpon>FeedbackPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassWindow2.xaml.cs">
       <DependentUpon>ForgotPassWindow2.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreditCardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FeedbackPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

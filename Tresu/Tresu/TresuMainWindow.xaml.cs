@@ -112,7 +112,8 @@ namespace Tresu
 
         private void StackPanelFB_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            FeedbackPage page = new FeedbackPage();
+            frame.Content = page;
         }
 
         private void StackPanel_SettingsPreviewMouseDown(object sender, MouseButtonEventArgs e)
