@@ -117,19 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Email_Title" xml:space="preserve">
-    <value>Електронна пошта :</value>
+  <data name="Colour_Title" xml:space="preserve">
+    <value>#ff0000</value>
   </data>
-  <data name="ForgotPass_Title" xml:space="preserve">
-    <value>Забули пароль ?</value>
-  </data>
-  <data name="Login_Title" xml:space="preserve">
-    <value>Логін</value>
-  </data>
-  <data name="Password_Title" xml:space="preserve">
-    <value>Пароль:</value>
-  </data>
-  <data name="Registration_Title" xml:space="preserve">
-    <value>Регістрація</value>
+  <data name="Colour_Title2" xml:space="preserve">
+    <value>#ff6600</value>
   </data>
 </root>

@@ -27,6 +27,8 @@ namespace DAL.Entities
 
         [Required]
         public bool IsLocked { get; set; }
+        [Required]
+        public bool TwoFactorAunteficationEnabled { get; set; }
 
         public virtual ICollection<Lock> Locks { get; set; }
 

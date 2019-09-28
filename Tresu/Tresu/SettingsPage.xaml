@@ -14,7 +14,7 @@
             <RowDefinition Height="329*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <ComboBox Width="150" Height="30" Margin="577,33,73,10">
+        <ComboBox  x:Name="comboBox" Width="150" Height="30" Margin="577,33,73,10">
             <ComboBoxItem >
                 <StackPanel Orientation="Horizontal">
                     <Image Source="en.png" Height="21" Width="65"/>
@@ -29,9 +29,9 @@
             </ComboBoxItem>
         </ComboBox>
         <CheckBox Margin="30,33,564,0" Content="2-factor authentication" FontSize="15"/>
-        <Button Grid.Row="2" Content="Accept" FontSize="15" Width="120" HorizontalAlignment="Right" Margin="0,0,73,10"/>
+        <Button Click="Button_Click" Grid.Row="2" Content="Accept" FontSize="15" Width="120" HorizontalAlignment="Right" Margin="0,0,73,10"/>
         <StackPanel Grid.Row="1">
-            <Label Content="BETA" Foreground="Blue" FontWeight="Bold" FontSize="14" Margin="130,10,0,0" />
+            <Label Content="BETA" Foreground="Blue" FontWeight="Bold" FontSize="14" Margin="130,5,0,0" />
             <Label Content="Select theme :" FontSize="20" Margin="30,0,0,0" />
             <WrapPanel Orientation="Horizontal" Margin="20">
                 <RadioButton >
@@ -48,35 +48,34 @@
                     </Border>
                 </RadioButton>
                 <RadioButton Margin="10,0,0,0">
-                <Border Height="100" Width="100" CornerRadius="12" Margin="0,0,0,0">
-                    <Border.Background>
-                        <LinearGradientBrush>
-                            <GradientStop Color="#ff0000" Offset="0"/>
-                            <GradientStop Color="#ff6600" Offset="0.567"/>
-                            <GradientStop Color="#ff6600" Offset="0.567"/>
+                    <Border Height="100" Width="100" CornerRadius="12" Margin="0,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#ff0000" Offset="0"/>
+                                <GradientStop Color="#ff6600" Offset="0.567"/>
 
-                        </LinearGradientBrush>
-                    </Border.Background>
+                            </LinearGradientBrush>
+                        </Border.Background>
 
 
-                </Border>
-                    </RadioButton >
+                    </Border>
+                </RadioButton>
                 <RadioButton Margin="10,0,0,0">
-                <Border Height="100" Width="100" CornerRadius="12" Margin="0,0,0,0">
-                    <Border.Background>
-                        <LinearGradientBrush>
-                            <GradientStop Color="#006600" Offset="0"/>
-                            <GradientStop Color="#00cc00" Offset="0.567"/>
-                        </LinearGradientBrush>
-                    </Border.Background>
+                    <Border Height="100" Width="100" CornerRadius="12" Margin="0,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#006600" Offset="0"/>
+                                <GradientStop Color="#00cc00" Offset="0.567"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
 
 
-                </Border>
-                    </RadioButton >
+                    </Border>
+                </RadioButton>
             </WrapPanel>
             <Label Content="Select my own image :" FontSize="20" Margin="30,0,0,0" />
             <StackPanel Orientation="Horizontal">
-            <TextBox Width="300" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                <TextBox Width="300" HorizontalAlignment="Left" Margin="30,0,0,0"/>
                 <Button Content="..." Margin="5,0,0,0" FontSize="18"/>
             </StackPanel>
         </StackPanel>
