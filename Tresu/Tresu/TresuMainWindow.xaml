@@ -37,6 +37,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Name="grid">
+       
         <Grid.RowDefinitions>
             <RowDefinition Height="58*"/>
             <RowDefinition Height="469*"/>
@@ -45,6 +46,7 @@
             <ColumnDefinition Width="51*"/>
             <ColumnDefinition Width="116*"/>
         </Grid.ColumnDefinitions>
+        <materialDesign:MaterialDateDisplay Margin="90,0,0,0"/>
         <Border x:Name="border" Background="White" CornerRadius="25" Grid.ColumnSpan="2"  Grid.Row="1" Margin="77,0,5,5">
             <Frame NavigationUIVisibility="Hidden" Panel.ZIndex="0" x:Name="frame" />
         </Border>

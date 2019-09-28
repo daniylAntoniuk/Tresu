@@ -73,6 +73,9 @@
     <Compile Include="AddFriendPage.xaml.cs">
       <DependentUpon>AddFriendPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AunteficationWindow.xaml.cs">
+      <DependentUpon>AunteficationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreditCardPage.xaml.cs">
       <DependentUpon>CreditCardPage.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,10 @@
       <DependentUpon>WindowRegister2.xaml</DependentUpon>
     </Compile>
     <Page Include="AddFriendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AunteficationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

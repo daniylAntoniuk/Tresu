@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:Tresu"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -18,7 +19,9 @@
             <TextBlock Text="Thanks for being one of the first people to try Tresu ! We tried to make Tresu perfect, but it`s imposible. You can send a letter for Tresu team to 
 make Tresu better! Send your ideas or suggestions for Tresu . Only with you, we become better !
                                                                                  -Tresu team ;)" FontSize="16" TextWrapping="Wrap" Margin="30"/>
+        
             <RichTextBox ScrollViewer.VerticalScrollBarVisibility="Visible" Height="150" Grid.Column="1" Margin="0,0,30,0" />
+            <materialDesign:RatingBar Margin="0,20,0,0"/>
             <Button Content="Send" HorizontalAlignment="Right" Width="100" Margin="0,20,30,0"/>
         </StackPanel>
 

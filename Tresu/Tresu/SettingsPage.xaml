@@ -35,7 +35,7 @@
             <Label Content="Select theme :" FontSize="20" Margin="30,0,0,0" />
             <WrapPanel Orientation="Horizontal" Margin="20">
                 <RadioButton >
-
+                
                     <Border Height="100" Width="100" CornerRadius="12"  >
                         <Border.Background>
                             <LinearGradientBrush>
