@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tresu"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:p="clr-namespace:Tresu.Properties"
         mc:Ignorable="d"
         Title="MainWindow" 
          ResizeMode="NoResize" Height="440" Width="400">
@@ -30,10 +31,10 @@
         </Grid.ColumnDefinitions>
         <Border Background="White" CornerRadius="15" Grid.Column="1" Grid.Row="1" Margin="0,0,52,27">
             <StackPanel HorizontalAlignment="Center" Margin="0,30,0,0">
-                <Label Content="Email :" FontSize="20"/>
+                <Label Content="{x:Static p:Resources.Email_Title}" FontSize="20"/>
                 <TextBox   Width="200" x:Name="loginBox" HorizontalAlignment="Left">
                 </TextBox>
-                <Label Content="Password :" FontSize="20"/>
+                <Label Content="{x:Static p:Resources.Password_Title}" FontSize="20"/>
                 <PasswordBox Width="200" x:Name="passwordBox" HorizontalAlignment="Left"/>
             </StackPanel>
         </Border>
@@ -45,11 +46,11 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Margin="0,0,0,-13" >
 
-            <Button Content="Login"  Click="ButtonLog_Click" Height="Auto" Width="120" HorizontalAlignment="Left" Margin="0,0,0,71" />
-            <Button Content="Register" Click="ButtonReg_Click"  Height="Auto" Width="120" HorizontalAlignment="Right" Margin="40,0,0,71"/>
+            <Button Content="{x:Static p:Resources.Login_Title}"  Click="ButtonLog_Click" Height="Auto" Width="120" HorizontalAlignment="Left" Margin="0,0,0,71" />
+            <Button Content="{x:Static p:Resources.Registration_Title}" Click="ButtonReg_Click"  Height="Auto" Width="120" HorizontalAlignment="Right" Margin="40,0,0,71"/>
 
         </StackPanel>
-        <Label  Cursor="Hand" MouseLeftButtonDown="Forgot_Password" Content="Forgot password ?" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="0,10"
+        <Label  Cursor="Hand" MouseLeftButtonDown="Forgot_Password" Content="{x:Static p:Resources.ForgotPass_Title}" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="0,10"
         >
             <Label.Style>
                 <Style TargetType="Label">

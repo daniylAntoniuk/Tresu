@@ -114,5 +114,11 @@ namespace Tresu
         {
 
         }
+
+        private void StackPanel_SettingsPreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SettingsPage page = new SettingsPage();
+            frame.Content = page;
+        }
     }
 }
