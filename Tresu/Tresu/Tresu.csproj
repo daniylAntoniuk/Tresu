@@ -281,5 +281,11 @@
   <ItemGroup>
     <Resource Include="visa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="uk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="en.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

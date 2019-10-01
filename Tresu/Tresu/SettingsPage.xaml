@@ -14,14 +14,14 @@
             <RowDefinition Height="329*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <ComboBox  x:Name="comboBox" Width="150" Height="30" Margin="577,33,73,10">
-            <ComboBoxItem >
+        <ComboBox Foreground="Black" x:Name="comboBox" Width="150" Height="30" Margin="577,33,73,10">
+            <ComboBoxItem Height="44" Width="175" >
                 <StackPanel Orientation="Horizontal">
                     <Image Source="en.png" Height="21" Width="65"/>
                     <TextBlock Text="English"/>
                 </StackPanel>
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Height="44" Width="175">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="uk.png" Height="21" Width="65"/>
                     <TextBlock Text="Українська"/>

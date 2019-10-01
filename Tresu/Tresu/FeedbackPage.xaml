@@ -11,11 +11,11 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="59*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Margin="0,40,30,0">
             <TextBlock Text="Thanks for being one of the first people to try Tresu ! We tried to make Tresu perfect, but it`s imposible. You can send a letter for Tresu team to 
 make Tresu better! Send your ideas or suggestions for Tresu . Only with you, we become better !
                                                                                  -Tresu team ;)" FontSize="16" TextWrapping="Wrap" Margin="30"/>
