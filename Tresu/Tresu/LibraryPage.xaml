@@ -19,6 +19,9 @@
         </Grid.RowDefinitions>
         <Image x:Name="img" />
         <Button Click="Button_Click" Grid.Column="1" Width="100" Content="Play" FontSize="15" HorizontalAlignment="Right" Margin="0,0,30,0"/>
-        <TextBlock FontSize="13" x:Name="txt" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap"/>
+        <ScrollViewer Grid.Column="1" Grid.Row="1" Margin="0,0,20,20">
+            
+        <TextBlock FontSize="13" x:Name="txt" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="0,0,20,0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
+        </ScrollViewer>
     </Grid>
 </Page>

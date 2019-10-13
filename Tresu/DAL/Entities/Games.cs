@@ -23,6 +23,8 @@ namespace DAL.Entities
         [StringLength(100), Required]
         public string Price { get; set; }
 
+        public string IconPhoto { get; set; }
+
         public string Photo { get; set; }
 
         public virtual ICollection<Skins> Skins { get; set; }
