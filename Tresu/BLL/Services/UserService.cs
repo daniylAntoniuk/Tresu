@@ -130,6 +130,7 @@ namespace BLL.Services
         public void Donate(int sum, int id)
         {
             _repository.Donate(sum, id);
+            
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Tresu
     public partial class TresuMainWindow : Window
     {
         int Id;
+        string emailHelp;
         private readonly IUserService _userService;
         public TresuMainWindow()
         {
@@ -38,6 +39,7 @@ namespace Tresu
         {
            // email = "danik22122005@gmail.com";
             InitializeComponent();
+            emailHelp = email;
             _userService = new UserService();
             Id = id;
             txtLogin.Text= _userService.GetUsers().FirstOrDefault(
@@ -64,14 +66,13 @@ namespace Tresu
         //Shop
         private void StackPanelShop_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            Metod();
         }
 
         //Trade
         private void StackPanelTrade_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            txtBalance.Text = _userService.GetUsers().FirstOrDefault(
-               u => u.Id == Id)?.Balance.ToString() + " $";
+            Metod();
             GameLibraryPage page = new GameLibraryPage(Id);
             frame.Content = page;
         }
@@ -79,8 +80,7 @@ namespace Tresu
         //Friends
         private void StackPanelFriends_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            txtBalance.Text = _userService.GetUsers().FirstOrDefault(
-                u => u.Id == Id)?.Balance.ToString() + " $";
+            Metod();
             AddFriendPage add = new AddFriendPage();
             frame.Content = add;
         }
@@ -88,17 +88,17 @@ namespace Tresu
         //Wed Site
         private void StackPanelSite_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            Metod();
             Website page1 = new Website();
             // grid.Conten = page1;
             frame.Content = page1;
             //this.Content = page1;
-            txtBalance.Text = _userService.GetUsers().FirstOrDefault(
-               u => u.Id == Id)?.Balance.ToString() + " $";
         }
 
         //Credit Catd
         private void StackPanelCredit_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            Metod();
             CreditCardPage page = new CreditCardPage(Id);
             frame.Content = page;
             
@@ -112,14 +112,22 @@ namespace Tresu
 
         private void StackPanelFB_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            Metod();
             FeedbackPage page = new FeedbackPage();
             frame.Content = page;
         }
 
         private void StackPanel_SettingsPreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+            Metod();
             SettingsPage page = new SettingsPage();
             frame.Content = page;
+        }
+        private void Metod()
+        {
+            IUserService _userServiceMy = new UserService();
+            UserModel model = _userServiceMy.FindByEmail(emailHelp);
+            txtBalance.Text = model.Balance.ToString();
         }
     }
 }

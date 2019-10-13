@@ -75,7 +75,7 @@ namespace Tresu
             {
                 if (match.Success)
                 {
-                    _userService.Donate(int.Parse(donate.Text), ID);
+                    _userService.Donate(int.Parse(donate.Text), ID);                   
                     MessageBox.Show("All done !");
 
                 }
