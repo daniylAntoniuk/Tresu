@@ -82,7 +82,7 @@
                       </LinearGradientBrush>
                     </ListView.Background>-->
 
-                    <ListViewItem PreviewMouseDown="ItemMenu_PreviewMouseDown" x:Name="ItemCatalog" Height="60">
+                    <ListViewItem PreviewMouseDown="StackPanelShop_PreviewMouseDown" x:Name="ItemCatalog" Height="60">
                         <StackPanel PreviewMouseDown="StackPanelShop_PreviewMouseDown" Width="200" Height="60" Margin="-8,0,0,0" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="ShoppingCart" Height="25" Width="25" Margin="17"/>
                             <TextBlock Text="Shop" VerticalAlignment="Center" Width="100" Margin="40,-59,0,0"/>

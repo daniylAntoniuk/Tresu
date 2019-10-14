@@ -67,6 +67,8 @@ namespace Tresu
         private void StackPanelShop_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             Metod();
+            StorePage page = new StorePage(Id);
+            frame.Content = page;
         }
 
         //Trade

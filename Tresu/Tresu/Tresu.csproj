@@ -130,6 +130,7 @@
     <Compile Include="StorePage.xaml.cs">
       <DependentUpon>StorePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StoreViewItem.cs" />
     <Compile Include="Website.xaml.cs">
       <DependentUpon>Website.xaml</DependentUpon>
     </Compile>
@@ -299,6 +300,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="csgo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fone.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

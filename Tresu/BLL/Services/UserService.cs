@@ -115,9 +115,9 @@ namespace BLL.Services
             return id;
         }
 
-        public Games GetGames(int id)
+        public Games GetGamesById(int id)
         {
-            var temp = _repository.GetGames(id).FirstOrDefault(t => t.Id == id);
+            var temp = _repository.GetGamesById(id).FirstOrDefault(t => t.Id == id);
             Games g = new Games
             {
                 Name = temp.Name,
@@ -131,6 +131,11 @@ namespace BLL.Services
         {
             _repository.Donate(sum, id);
             
+        }
+
+        public IEnumerable<Games> GetGames()
+        {
+            return _repository.GetGames();
         }
     }
 }

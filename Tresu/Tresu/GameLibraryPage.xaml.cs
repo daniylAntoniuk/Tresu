@@ -43,7 +43,7 @@ namespace Tresu
 
             foreach (int el in GameId)
             {
-                var temp = _userService.GetGames(el);
+                var temp = _userService.GetGamesById(el);
                 LibraryItem lvi = new LibraryItem();
                 lvi.Name = temp.Name ;
                 lvi.Icon = new BitmapImage(new Uri(Environment.CurrentDirectory+@"/../../Images/" + temp.Photo ));

@@ -9,6 +9,35 @@
       Title="StorePage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="196*"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1" Margin="40,0,0,0" Height="32" >
+
+            <TextBox  x:Name="txt" Width="500"/>
+            <Button Click="Button_Click" Content="Search" Margin="40,0,0,0"/>
+        </StackPanel>
+        <ListView x:Name="listView" Grid.Row="1"  ItemsSource="{Binding StoreViewtem}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+
+                        <Border Height="280" Width="180">
+                            <Border.Background>
+                                <ImageBrush ImageSource="fone.jpg"/>
+                            </Border.Background>
+                            <StackPanel>
+
+                                <Image Margin="5" Width="180" Height="80" Source="{Binding Photo}"/>
+                                <TextBlock Text="{Binding Name}" FontSize="24" Margin="5,5,0,0"/>
+                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Margin="5"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
     </Grid>
 </Page>

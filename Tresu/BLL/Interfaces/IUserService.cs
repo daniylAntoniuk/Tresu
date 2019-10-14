@@ -18,7 +18,8 @@ namespace BLL.Interfaces
         string GetLockReason(int id);
         UserModel FindByEmail(string email);
         IEnumerable<UserGames> GetUserGames(int id);
-        Games GetGames(int id);
+        IEnumerable<Games> GetGames();
+        Games GetGamesById(int id);
         void Donate(int sum,int id);
     }
 }

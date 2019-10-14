@@ -75,7 +75,7 @@ namespace DAL.Repositories
         {
             return _context.Users.FirstOrDefault(t => t.Id == id)?.UserGames;
         }
-        public IEnumerable<Games> GetGames(int id)
+        public IEnumerable<Games> GetGamesById(int id)
         {
             return _context.Games.AsEnumerable();
         }
@@ -84,6 +84,11 @@ namespace DAL.Repositories
         {
             _context.Users.FirstOrDefault(t => t.Id == id).Balance += sum;
             _context.SaveChanges();
+        }
+
+        public IEnumerable<Games> GetGames()
+        {
+            return _context.Games.AsEnumerable();
         }
     }
 }
